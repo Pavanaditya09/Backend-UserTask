@@ -142,6 +142,7 @@ app.put('/tasks/:id/', authenticateToken, async (request, response) => {
   response.send('Task Update Succesfully')
 })
 
+// Deleting the Task
 app.delete('/tasks/:id/', authenticateToken, async (request, response) => {
   const {id} = request.params
   const selecttaskQuery = `DELETE  FROM Tasks WHERE id =${id};`
