@@ -94,7 +94,7 @@ app.post('/login/', async (request, response) => {
 })
 
 // User Data
-app.get('/data/', async (request, response) => {
+app.get('/data/',authenticateToken, async (request, response) => {
   const selectUserQuery = `SELECT * FROM Users `
   const dbUser = await db.all(selectUserQuery)
   response.send(dbUser)
