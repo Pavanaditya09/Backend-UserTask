@@ -1,0 +1,66 @@
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{    
+    "username": "Raju",
+    "password": "Raju@123"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "password": "rahul@456"
+}
+
+###
+
+GET http://localhost:3000/data/
+
+
+###
+
+POST http://localhost:3000/tasks/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzE0NTc5MjE1fQ.50mYCn8M1yD41dkgWY5AHQwHMk1beCpx6DA6F8nowLA
+Content-Type: application/json
+
+{
+    "title" : "Company Details Page",
+    "description" : "Make a Good User Interface Page about Company",
+    "status" : "Progress",
+    "assigneeid" : 5,
+    "createdat" : "05-01-2024",
+    "updatedat" : "05-05-2024"
+}
+
+###
+
+GET http://localhost:3000/tasks/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzE0NTc5MjE1fQ.50mYCn8M1yD41dkgWY5AHQwHMk1beCpx6DA6F8nowLA
+###
+
+GET http://localhost:3000/tasks/2/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzE0NTc5MjE1fQ.50mYCn8M1yD41dkgWY5AHQwHMk1beCpx6DA6F8nowLA
+###
+
+PUT  http://localhost:3000/tasks/5/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzE0NTc5MjE1fQ.50mYCn8M1yD41dkgWY5AHQwHMk1beCpx6DA6F8nowLA
+Content-Type: application/json
+
+{
+    "title" : "Company Details Page",
+    "description" : "Make a Good User Interface Page about Company",
+    "status" : "Progress",
+    "assigneeid" : 1,
+    "createdat" : "05-01-2024",
+    "updatedat" : "05-05-2024"
+}
+
+###
+
+DELETE http://localhost:3000/tasks/5/
+Authorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzE0NTc5MjE1fQ.50mYCn8M1yD41dkgWY5AHQwHMk1beCpx6DA6F8nowLA
+###
